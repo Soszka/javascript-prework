@@ -1,15 +1,8 @@
-var argButtonName, buttonPapper, buttonRock, buttonScissors, buttonTest;
+var argButtonName;
 
-/**
- * Describe this function...
- */
-
-buttonRock = document.getElementById('button-rock');
-buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
-buttonPapper = document.getElementById('button-paper');
-buttonPapper.addEventListener('click', function(){ buttonClicked('papier'); });
-buttonScissors = document.getElementById('button-scissors');
-buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+const buttonRock = document.getElementById('button-rock');
+const buttonPapper = document.getElementById('button-paper');
+const buttonScissors = document.getElementById('button-scissors');
 
 function buttonClicked(argButtonName) {
   clearMessages();
@@ -61,4 +54,10 @@ randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
 computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
-displayResult(playerMove, computerMove);a
+displayResult(playerMove, computerMove);
+
+
+buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
+buttonPapper.addEventListener('click', function(){ buttonClicked('papier'); });
+buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
+
